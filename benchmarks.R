@@ -15,3 +15,6 @@ d1 = makeCacheMatrix(d)
 e1 = makeCacheMatrix(e)
 tm <- microbenchmark(solve(a), solve(b), solve(c), solve(d), solve(e), cacheSolve(a1), cacheSolve(b1), cacheSolve(c1), cacheSolve(d1), cacheSolve(e1), times = 100)
 tm
+
+library("ggplot2")
+boxplot(tm)
